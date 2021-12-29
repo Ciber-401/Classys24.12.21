@@ -20,3 +20,41 @@
 # drive!”. Если же бензина не хватит, то распечатайте “Need more fuel, please, fill
 #
 # more!”
+
+
+class Car: # создаем класс ""
+    """ когда говорят Пропишите в конструкторе параметры make, model, year,odometer, fuel."""
+    """и когда Пусть у показателя odometer будет первоначальное значение 0, а у fuel 70. 
+    это значит что значения мы должны передать по умолчанию внутри конструктора"""
+    def __init__(self, make, model, year, odometer=0, fuel=70): # конструктор идет с помошью инит внутри указываем параметры
+        self.make = make #
+        self.model = model #
+        self.year = year #
+        self.odometer = odometer #
+        self.fuel = fuel #
+
+    def drive(self, distance): # создаем метод "" и передаем в него аргумент "" дистанции
+        fuel = distance / 10 # и переменную "" в которую передаем "" делим на ""
+        """и проверяем если бензин больше или ровно "" """
+        if self.fuel >= fuel: #
+            self.__add_distance(distance) # добавь дистанчию
+            self.__subtract_fuel(fuel) # и бензин
+            print('Let’s drive!') # выведи сообющение поехали
+        else: # в другом случае если бензин равна 0 то вы води следующее сообщение
+            print('Need more fuel, please, fill more!') #
+
+    def __add_distance(self, distance): # создаем метод добаление дистанции
+        self.odometer += distance #
+
+    def __subtract_fuel(self, fuel): # создаем убывания бензина
+        self.fuel -= fuel #
+
+
+car1 = Car('mers', 'c63', '2000', 5, 0)
+car1.drive(5)
+
+
+
+
+
+

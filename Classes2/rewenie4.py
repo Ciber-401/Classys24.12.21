@@ -14,12 +14,4 @@
 #
 # В объекте Zoo измените значение атрибута animal_3 и присвойте ему значение "Змея".
 
-class Zoo:
-
-    def batya(self,animal_1):
-        self.animal_1 = animal_1
-        return animal_1
-
-bayya = Zoo()
-print(bayya.batya('tigr'))
 
